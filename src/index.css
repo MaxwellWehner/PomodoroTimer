@@ -1,13 +1,200 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+html {
+  background-color: pink;
+}
+.footer {
+  background-color: tomato;
+  padding: 2rem;
+}
+.header {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  background-color: rgb(238, 103, 125);
+}
+.header img {
+  padding: 10px;
+  margin-left: 20px;
+}
+.headingBtn {
+  width: auto;
+  margin: auto 10px;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main .btn-primary {
+  color: rgb(197, 54, 29);
+  background-color: pink;
+  border-color: rgb(197, 54, 29);
+  font-weight: 600;
+  margin-top: 20px;
+  border-width: 2px;
+}
+
+#btngrp2 {
+  margin-bottom: 0px;
+}
+
+.main .media {
+  margin-top: 0px;
+}
+
+.main .btn-primary:hover {
+  color: pink;
+  background-color: rgb(197, 54, 29);
+  border-color: rgb(197, 54, 29);
+}
+.main .btn-primary:focus {
+  color: pink;
+  background-color: rgb(197, 54, 29);
+  border-color: rgb(197, 54, 29);
+  box-shadow: 0 0 0 0 rgb(197, 54, 29);
+}
+
+.header .btn {
+  color: rgb(197, 54, 29);
+  background-color: pink;
+  border-color: rgb(197, 54, 29);
+  font-weight: 600;
+}
+
+@media (max-width: 500px) {
+  .header .btn {
+    line-height: 15px;
+  }
+}
+@media (max-width: 370px) {
+  .header .btn {
+    line-height: 13px;
+    padding-top: 1px;
+  }
+}
+
+.header .btn:hover {
+  color: pink;
+  background-color: rgb(197, 54, 29);
+  border-color: rgb(197, 54, 29);
+}
+
+.header .btn:focus {
+  color: pink;
+  background-color: rgb(197, 54, 29);
+  border-color: rgb(197, 54, 29);
+  box-shadow: 0 0 0 0 rgb(197, 54, 29);
+}
+
+.clockPic {
+  margin-right: auto;
+  width: 75px;
+  height: auto;
+}
+
+.modal-header {
+  background-color: rgb(238, 103, 125);
+  color: black;
+}
+
+.modal-body {
+  color: black;
+  background-color: rgb(252, 215, 221);
+}
+
+.modal-footer {
+  color: black;
+  background-color: rgb(252, 215, 221);
+}
+
+.modal-footer .btn {
+  color: rgb(197, 54, 29);
+  background-color: pink;
+  border-color: rgb(197, 54, 29);
+  font-weight: 600;
+  border-width: 2px;
+}
+.modal-footer .btn:hover {
+  color: pink;
+  background-color: rgb(197, 54, 29);
+  border-color: rgb(197, 54, 29);
+}
+.modal-footer .btn:focus {
+  color: pink;
+  background-color: rgb(197, 54, 29);
+  border-color: rgb(197, 54, 29);
+  box-shadow: 0 0 0 0 rgb(197, 54, 29);
+}
+
+.App {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  text-align: center;
+  background-color: pink;
+}
+
+.main span {
+  font-size: 20vw;
+  font-family: "Black Ops One", cursive;
+  color: rgb(197, 54, 29);
+}
+
+.red-progress {
+  margin-left: 25vw;
+  margin-right: 25vw;
+  margin-top: 30px;
+  height: 30px;
+  background-color: rgb(197, 54, 29);
+  border-radius: 5px;
+  position: absolute;
+}
+
+.bar-backround {
+  float: left;
+  margin-left: 25vw;
+  margin-top: 30px;
+  width: 50vw;
+  height: 30px;
+  background-color: rgb(238, 103, 125);
+  border-radius: 5px;
+  border-color: rgb(197, 54, 29);
+  border-style: solid;
+  border-width: 3px;
+}
+
+.footer {
+  font-weight: 600;
+  color: rgb(218, 45, 15);
+  background-color: rgb(252, 122, 144);
+}
+
+.main .btn-primary:disabled {
+  color: pink;
+  background-color: rgb(197, 54, 29);
+  border-color: rgb(197, 54, 29);
+}
+
+.work-session {
+  margin-top: 20px;
+  color: rgb(197, 54, 29);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 0px;
+}
+
+/*removing arrows from input
+ Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
