@@ -19,20 +19,15 @@ const AboutPage = (props) => {
           <Modal.Title>What is the Pomadoro Technique?</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h3>Online Pomodoro Timer</h3>
-          <p>
-            TomatoTimers is a customizable and easy to use looping pomodoro
-            timer to boost your efficiency.
-          </p>
           <h3>About Pomodoro Technique</h3>
           <p>
-            Pomodoro™ Technique is a time management method developed by
-            Francesco Cirillo in the late 1980s. This technique use timer to
-            break down works into a set of intervals separated by breaks.
+            The Pomodoro™ Technique is a time management method developed by
+            Francesco Cirillo in the late 1980s. This technique uses a timer to
+            break down work into a set of intervals separated by breaks. The
             Pomodoro technique increases productivity by taking short scheduled
             breaks regularly.
           </p>
-          <h3>How to use Pomodoro/ Tomato timers</h3>
+          <h3>How to use the Pomodoro timer</h3>
           <ol>
             <li>
               Decide on a task to be done and set the timer to 25 minutes for
