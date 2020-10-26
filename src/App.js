@@ -380,6 +380,7 @@ class App extends Component {
 
   componentDidMount() {
     //stuff in here runs when the page first loads
+    console.log("Working...");
     document.getElementsByClassName("red-progress")[0].style.width = 0 + "vw";
     document.getElementsByClassName("bar-backround")[0].style.width = 50 + "vw";
     this.updateOnWindowChangeFn();
