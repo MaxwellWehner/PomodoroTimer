@@ -35,9 +35,10 @@ const AboutPage = (props) => {
           <h3>How to use Pomodoro/ Tomato timers</h3>
           <ol>
             <li>
-              Decide task to be done set timers to 25 minutes for one "Pomodoro"
+              Decide on a task to be done and set the timer to 25 minutes for
+              one "Pomodoro"
             </li>
-            <li>Work on task until timer is complete</li>
+            <li>Work on the task until timer is complete</li>
             <li>Take a 5 minutes short break</li>
             <li>After four "Pomodoro" take a long break</li>
             <li>Repeat to step 1</li>
