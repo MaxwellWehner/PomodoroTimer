@@ -44,7 +44,7 @@ const Settings = ({
       children.push(<option key={i + 1} value={i} />);
     }
     return (
-      <datalist id="time" autoComplete="off">
+      <datalist id="time" autocomplete="off">
         {children}
       </datalist>
     );

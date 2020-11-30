@@ -380,11 +380,31 @@ class App extends Component {
 
   componentDidMount() {
     //stuff in here runs when the page first loads
-    console.log("Working...");
+    let displaySec =
+      this.state.timerSec === 0
+        ? "00"
+        : this.state.timerSec < 10
+        ? "0" + this.state.timerSec
+        : this.state.timerSec;
     document.getElementsByClassName("red-progress")[0].style.width = 0 + "vw";
     document.getElementsByClassName("bar-backround")[0].style.width = 50 + "vw";
+    document.getElementsByTagName(
+      "TITLE"
+    )[0].textContent = `(${this.state.timeMin}:${displaySec}) Pomadoro Clock`;
     this.updateOnWindowChangeFn();
     window.addEventListener("resize", this.updateOnWindowChangeFn); //adds a listener that activates a fn when the "resize happens"
+  }
+
+  componentDidUpdate() {
+    let displaySec =
+      this.state.timerSec === 0
+        ? "00"
+        : this.state.timerSec < 10
+        ? "0" + this.state.timerSec
+        : this.state.timerSec;
+    document.getElementsByTagName(
+      "TITLE"
+    )[0].textContent = `(${this.state.timeMin}:${displaySec}) Pomadoro Clock`;
   }
 
   componentWillUnmount() {
