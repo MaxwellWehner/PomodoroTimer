@@ -48,6 +48,7 @@ class App extends Component {
     this.setWidth = this.setWidth.bind(this);
     this.updateOnWindowChangeFn = this.updateOnWindowChangeFn.bind(this);
     this.playStart = this.playStart.bind(this);
+    this.setTitle = this.setTitle.bind(this);
   }
   updateWorkTime(e) {
     if (e.target.value >= 1) {
@@ -278,12 +279,33 @@ class App extends Component {
     }
   }
 
+  setTitle() {
+    let titleText = `ewe`;
+
+    switch (this.state.timeType) {
+      case "longBreak":
+        titleText = `Long Break Has Ended`;
+        break;
+      case "shortBreak":
+        titleText = `Short Break Has Ended`;
+        break;
+      case "work":
+        titleText = `Work Time Has Ended`;
+        break;
+      default:
+        titleText = `Work Time Has Ended`;
+        break;
+    }
+    document.getElementsByTagName("TITLE")[0].textContent = `${titleText}`;
+  }
+
   decreaseTimer() {
     switch (this.state.timerSec) {
       case 0:
         if (this.state.timeMin === 0) {
           this.pause();
           this.playaudio();
+          this.setTitle();
           this.setLoop();
           break;
         }
@@ -390,7 +412,7 @@ class App extends Component {
     document.getElementsByClassName("bar-backround")[0].style.width = 50 + "vw";
     document.getElementsByTagName(
       "TITLE"
-    )[0].textContent = `(${this.state.timeMin}:${displaySec}) Pomadoro Clock`;
+    )[0].textContent = `(${this.state.timeMin}:${displaySec}) ${this.state.timeType} Pomadoro Clock`;
     this.updateOnWindowChangeFn();
     window.addEventListener("resize", this.updateOnWindowChangeFn); //adds a listener that activates a fn when the "resize happens"
   }
@@ -404,7 +426,7 @@ class App extends Component {
         : this.state.timerSec;
     document.getElementsByTagName(
       "TITLE"
-    )[0].textContent = `(${this.state.timeMin}:${displaySec}) Pomadoro Clock`;
+    )[0].textContent = `(${this.state.timeMin}:${displaySec}) ${this.state.timeType} Pomadoro Clock`;
   }
 
   componentWillUnmount() {
